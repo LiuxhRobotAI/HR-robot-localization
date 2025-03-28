@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- Required chmod +x uwb_localization.py -->
+    <node name="uwb_localozation"
+          pkg="uwb_localization_dwm"
+          type="uwb_localization.py"
+          respawn="true"
+          output="screen">
+          <rosparam file="$(find uwb_localization_dwm)/config/params.yaml"
+                    command="load"/>
+    </node>
+
+</launch>

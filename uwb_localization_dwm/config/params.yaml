@@ -1,0 +1,14 @@
+port: "/dev/ttyACM0" # Jackal: ttyACM1
+tag_name: "tag"
+use_network: False
+network: "network0"
+verbose: False # do not print messages, or True
+
+problem_dimension: 3
+min_anchors: 4
+uwb_from_bag: False #True # 
+
+# parameters for calibration
+# num_Rt_poses: "250"
+odom0_path_topic: "/uwb/localization/tag/hr_path" # /uwb/localization/tag/ls_path
+odom1_path_topic: "/aft_mapped_path" # /vins_estimator/path, /loop_fusion/pose_graph_path, /globalEstimator/global_path
