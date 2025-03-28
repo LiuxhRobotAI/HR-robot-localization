@@ -159,13 +159,13 @@ python path_result_analysis.py [bag_name]
 In these similations, robot localization problems are used to present the solutions provided by the high-order regularization. Some other regularization methods are also included.
 
 ```
-cd Simulation
+cd simulation
 [run] HR_RLmain.m
 ```
 
 ## Publications
 
-We kindly recommend to cite [our paper](https://arxiv.org/abs/2410.01919) if you find this high-order regulariation method useful:
+We kindly recommend to cite [our paper](https://arxiv.org/abs/2410.01919) if you find this high-order regularization method useful:
 
 ```latex
 @article{liu2024high,
