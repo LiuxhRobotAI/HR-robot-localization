@@ -133,27 +133,14 @@ python uwb_fuhry_tihkionov.py [bag_name_prefix height] # Analyze the defaut data
 ```
 
 ## localization using stored distance data
-The `path_result_analysis.py` can be used to analyze the performance of two methods. The paths of the robot stored different methods. Right now, there are `HRM`, `LS` and `FTR`. The reference is provided by a Lidar using an `A-LOAM` localization method, and the matched reference and estimation paths are aligned by Umeyama's method similar to the `evo``, an evaluation tool. Follow a `bag_name` to analyze a specific dataset. Example to run
+The `path_result_analysis.py` can be used to analyze the performance of two methods. The paths of the robot stored different methods. Right now, there are `HRM`, `LS` and `FTR`. The reference is provided by a Lidar using an `A-LOAM` localization method, and the matched reference and estimation paths are aligned by Umeyama's method similar to the `evo`, an evaluation tool. Follow a `bag_name` to analyze a specific dataset. Example to run
 ```
 python path_result_analysis.py [bag_name] # Analyze the defaut dataset if no [bag_name].
 ```
 
-## ToDo
-- [ ] Design controller to perform trajectory tracking control(using a new repo)
-
 ## Some references:
-[The MDEK1001](https://www.qorvo.com/products/p/MDEK1001#documents) (a kits with 12 DWM1001-DEV development boards) resoures;
-
-[The MDEK1001 User Manual](https://www.qorvo.com/products/d/da007995);
-
-`https://github.com/20chix/dwm1001_ros`;
-
-`https://github.com/TIERS/ros-dwm1001-uwb-localization`;
-
-`https://github.com/ros/ros_tutorials/tree/ee5144f314e669cc6c85ea6e93b7da55d090a684/turtlesim/tutorials`;
-
-`http://docs.ros.org/en/latest-available/api/jackal_tutorials/html/simulation.html`;
-
-`https://github.com/L53317/A-modified-A-LOAM`; and
-
-`https://github.com/MichaelGrupp/evo`.
+[The MDEK1001](https://www.qorvo.com/products/p/MDEK1001#documents) (a kits with 12 DWM1001-DEV development boards) resoures,
+[the MDEK1001 User Manual](https://www.qorvo.com/products/d/da007995),
+[dwm1001 driver](https://github.com/20chix/dwm1001_ros) and [the MDEK1001 API](https://github.com/TIERS/ros-dwm1001-uwb-localization),
+[evo](https://github.com/MichaelGrupp/evo), and
+[simulating Jackal](http://docs.ros.org/en/latest-available/api/jackal_tutorials/html/simulation.html).
