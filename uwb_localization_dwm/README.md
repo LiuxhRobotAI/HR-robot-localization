@@ -1,5 +1,3 @@
-[![License: MIT][def]](https://opensource.org/licenses/MIT)
-
 # uwb_localization_dwm
 An implementation of UWB(Ultra-wideband) localization with DWM1001c.
 
@@ -65,20 +63,10 @@ The output of UWB sensors (at least 1 active tag and 1 active anchor are require
 ![](picture/cutecom_DWM1001DEV_output.png)
 
 ## Create ROS package
-An example to create a ROS package
-```
-# Build your own ROS package
-cd ~/catkin_ws/src/uwb_localization_dwm
-catkin_create_pkg uwb_localization_dwm rospy roscpp geometry_msgs nav_msgs sensor_msgs std_msgs
-
-# built
-cd ~/catkin_ws
-catkin_make
-```
 To download this source code
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/L53317/uwb_localization_dwm.git
+git clone https://github.com/LiuxhRobotAI/HR-robot-localization.git
 
 # built
 cd ~/catkin_ws
@@ -169,6 +157,3 @@ python path_result_analysis.py [bag_name] # Analyze the defaut dataset if no [ba
 `https://github.com/L53317/A-modified-A-LOAM`; and
 
 `https://github.com/MichaelGrupp/evo`.
-
-
-[def]: https://img.shields.io/badge/License-MIT-yellow.svg

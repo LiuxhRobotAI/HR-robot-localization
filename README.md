@@ -69,16 +69,6 @@ python3 get_uwb_data.py
 ```
 
 ## Create ROS package
-An example to create a ROS package
-```
-# Build your own ROS package
-cd ~/catkin_ws/src/uwb_localization_dwm
-catkin_create_pkg uwb_localization_dwm rospy roscpp geometry_msgs nav_msgs sensor_msgs std_msgs
-
-# built
-cd ~/catkin_ws
-catkin_make
-```
 To download this source code
 ```
 cd ~/catkin_ws/src
