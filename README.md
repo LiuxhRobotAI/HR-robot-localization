@@ -11,18 +11,32 @@
 </div>
 
 ## About
-In this work, we propose a high-order regularization method to solve the ill-conditioned problems.
+In this work, we propose a high-order regularization method to solve the ill-conditioned problems. Numerical solutions to robot localization problems are often unstable when the problems are ill-conditioned. A typical way to solve ill-conditioned problems is regularization, and a classical regularization method is the Tikhonov regularization. It is shown that the Tikhonov regularization can be seen as a low-order case of our method. We find that the proposed method is superior to the Tikhonov regularization in approximating some ill-conditioned inverse problems, such as robot localization problems. The proposed method overcomes the over-smoothing problem in the Tikhonov regularization as it can use more than one term in the approximation of the matrix inverse, and an explanation for the over-smoothing of the Tikhonov regularization is given. Moreover, one a priori criterion which improves the numerical stability of the ill-conditioned problem is proposed to obtain an optimal regularization matrix. As most of the regularization solutions are biased, we also provide two bias-correction techniques for the proposed high-order regularization. The simulation and experiment results using a sensor network in a 3D environment are discussed, demonstrating the performance of the proposed method.
+
+## Restricted robot localization
+A demo for such a restricted environment and experiments can be found in the following video:
+
+<!-- [![Video](uwb_localization_dwm/materials/High-order_regularization_robot_localization.gif)](uwb_localization_dwm/materials/High-order_regularization_robot_localization.gif) -->
+
+<a href="https://youtu.be/2Apt2UHLVNQ" target="_blank"><img src="uwb_localization_dwm/materials/High-order_regularization_robot_localization.gif" alt="HRRL" width="600" height="350" border="10" /></a>
+
+Or find it on:
+
+[Youtube](https://youtu.be/2Apt2UHLVNQ)
+
+<!-- [Bilibili](https://youtu.be/2Apt2UHLVNQ) -->
 
 ## Updates
-
-- \[2025.03\] - Accepted.
+<!-- - \[2025.10\] - Presenting at IROS 2025. -->
+- \[2025.04\] - Published.
+- \[2025.03\] - Accepted by T-RO.
 
 
 # HR-robot-localization
 The high-order regularization method for ill-conditioned problems. Some robot localization problems in restricted situations are ill-conditioned problems.
 
 ## uwb_localization_dwm
-An implementation of UWB(Ultra-wideband) localization with DWM1001c. The high-order regularization method is included.
+An implementation of the high-order regularization method for robot localization to deal with the ill-conditioned situations. The robot is equipped with some UWB(Ultra-wideband) sensors with DWM1001c.
 
 ## Information of platform
 
@@ -133,7 +147,7 @@ python save_plot_path_results.py [bag_name] # Analyze the defaut dataset if no [
 ```
 
 ## Localization using stored distance data
-The `uwb_fuhry_tihkionov.py` can be used to localize and get the paths of the robot using stored distance data with different methods. Right now, there are `HR`, `LS`, `TSVD` and `FTR`. Follow two string `bag_name_prefix height` to analyze a specific dataset. Example to run
+The `uwb_fuhry_tihkionov.py` can be used to localize and get the paths of the robot using stored distance data with different methods. Example to run
 ```
 python uwb_fuhry_tihkionov.py [bag_name_prefix height]
 ```
@@ -158,10 +172,14 @@ cd simulation
 We kindly recommend to cite [our paper](https://arxiv.org/abs/2410.01919) if you find this high-order regularization method useful:
 
 ```latex
-@article{liu2024high,
-  title={High-order regularization dealing with ill-conditioned robot localization problems},
+@ARTICLE{liu2025high,
   author={Liu, Xinghua and Cao, Ming},
-  journal={arXiv preprint arXiv:2410.01919},
-  year={2024}
+  journal={IEEE Transactions on Robotics},
+  title={High-Order Regularization Dealing With ILL-Conditioned Robot Localization Problems},
+  year={2025},
+  volume={41},
+  number={},
+  pages={3539-3555},
+  doi={10.1109/TRO.2025.3562487}
 }
 ```

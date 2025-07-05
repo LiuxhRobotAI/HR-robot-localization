@@ -1,9 +1,9 @@
 # uwb_localization_dwm
-An implementation of UWB(Ultra-wideband) localization with DWM1001c.
+An implementation of the high-order regularization method for robot localization using UWB (Ultra-wideband) sensors (DWM1001c).
 
 ## Information of platform
 
-OS: `Ubuntu 20.04 LTS ` under `WSL2 (and Windows 11)` 
+OS: `Ubuntu 20.04 LTS` Or `Ubuntu 20.04` under `WSL2 (and Windows 11)`
 
 ROS: `noetic`
 
@@ -46,7 +46,7 @@ python3 get_uwb_data.py
 ```
 
 ### Test UWB with cutecom
-You can also get the data with cutecom, if you have installed the cutecom in Ubuntu.
+You can also get the data with `cutecom`, if you have installed the cutecom in Ubuntu.
 ```
 sudo apt update
 sudo apt install cutecom
@@ -60,7 +60,7 @@ Note that to get the data from cutecom, you must configure the UWB sensor follow
 9. Enter ‘les’ to display the location estimates of the tag.
 ```
 The output of UWB sensors (at least 1 active tag and 1 active anchor are required)
-![](picture/cutecom_DWM1001DEV_output.png)
+![](materials/cutecom_DWM1001DEV_output.png)
 
 ## Create ROS package
 To download this source code
@@ -121,18 +121,18 @@ python save_bag_topic_dis.py [bag_name] # Analyze the defaut dataset if no [bag_
 ```
 
 ## Path data saving and analyzing
-The `plot_path_results.py` can be used to save and plot the paths of the robot using different methods. Right now, there are `HRM`, `LS`, `VI`, `VI-loop` and `LOAM` in some cases, maybe `VIU`, `LU`, `LIU` even `VILU` will be included shortly. Follow a `bag_name` to analyze a specific dataset. Example to run
+The `plot_path_results.py` can be used to save and plot the paths of the robot using different methods. Follow a `bag_name` to analyze a specific dataset. Example to run
 ```
 python save_plot_path_results.py [bag_name] # Analyze the defaut dataset if no [bag_name].
 ```
 
-## localization using stored distance data
-The `uwb_fuhry_tihkionov.py` can be used to localize and get the paths of the robot using stored distance data with different methods. Right now, there are `HRM`, `LS` and `FTR`. Follow two string `bag_name_prefix height` to analyze a specific dataset. Example to run
+## Localization using stored distance data
+The `uwb_fuhry_tihkionov.py` can be used to localize and get the paths of the robot using stored distance data with different methods. Example to run
 ```
-python uwb_fuhry_tihkionov.py [bag_name_prefix height] # Analyze the defaut dataset if no [bag_name_prefix height].
+python uwb_fuhry_tihkionov.py [bag_name_prefix height]
 ```
 
-## localization using stored distance data
+## Localization using stored distance data
 The `path_result_analysis.py` can be used to analyze the performance of two methods. The paths of the robot stored different methods. Right now, there are `HRM`, `LS` and `FTR`. The reference is provided by a Lidar using an `A-LOAM` localization method, and the matched reference and estimation paths are aligned by Umeyama's method similar to the `evo`, an evaluation tool. Follow a `bag_name` to analyze a specific dataset. Example to run
 ```
 python path_result_analysis.py [bag_name] # Analyze the defaut dataset if no [bag_name].
