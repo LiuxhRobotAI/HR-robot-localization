@@ -24,7 +24,7 @@ Or find it on:
 
 [Youtube](https://youtu.be/2Apt2UHLVNQ)
 
-<!-- [Bilibili](https://youtu.be/2Apt2UHLVNQ) -->
+[Bilibili](https://www.bilibili.com/video/BV15huCzWE6V/?pop_share=1)
 
 ## Updates
 <!-- - \[2025.10\] - Presenting at IROS 2025. -->
